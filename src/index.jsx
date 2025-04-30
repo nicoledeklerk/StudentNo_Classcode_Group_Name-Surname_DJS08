@@ -1,14 +1,21 @@
 
-import ReactDOM from 'react-dom/client'
-import { BrowserRouter, Routes, Route } from "react-router-dom"
-import App from './App.jsx'
-import './index.css'
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom"
+import Home from "./pages/Home"
+import About from "./pages/About"
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <BrowserRouter>
-    <Routes>
-      <App />
-    </Routes>
-  </BrowserRouter>
-); 
 
+function App() {
+    return (
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />}/>
+          <Route path="/about" element={<About />}/>
+        </Routes>
+      </BrowserRouter>
+    )
+  }
+
+ReactDOM
+  .createRoot(document.getElementById('root'))
+  .render(<App />);
