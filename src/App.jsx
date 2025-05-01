@@ -2,7 +2,8 @@
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import Home from './pages/Home.jsx'; // Adjust the path based on your project structure
 import About from './pages/About.jsx'; // Adjust the path based on your project structure
-import Vans from "./pages/Vans"
+import Vans from "./pages/Vans";
+import VanDetail from './pages/VanDetail';  
 
 import "./server"
 
@@ -20,6 +21,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/vans" element={<Vans />} />
+        <Route path="/vans/:id" element={<VanDetail />} />
       </Routes>
     </BrowserRouter>
   );
